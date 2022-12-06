@@ -1,0 +1,437 @@
+body {
+	margin-top: 5vw;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
+	background-image: url("bg.jpg");
+	background-size: 100%;
+}
+
+button {
+	cursor: pointer;
+	outline: 0;
+}
+
+#countdownCont {
+	width: 10vw;
+	margin-top: 2%;
+	margin-left: 47%;
+}
+
+#countdown {
+	width: 5vw;
+	font-size: calc(1vw + 1vh + .5vmin);
+	border-radius: 30px;
+	transition: .5s ease-out;
+	text-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#scoreCont {
+	width: 10vw;
+	margin-top: 2%;
+	margin-left: 34.4%;
+}
+
+#score {
+	width: 30vw;
+	font-size: calc(1.2vw + 1.2vh + 2vmin);
+	text-align: center;
+	border-radius: 30px;
+	background-color: transparent;
+	color: white;
+	transition: .5s ease-out;
+}
+
+#problemCont {
+	font-size: 13vw;
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+	margin-top: 3%;
+	font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  	font-stretch: expanded;
+  	background: linear-gradient(to left, #696880 50%, #7F7D9C 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#hardFactor {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	margin-bottom: -3%;
+}
+
+#word, #color {
+	color: rgb(153, 153, 153);
+	opacity: .3;
+	width: 100vw;
+	text-align: center;
+	font-size: 2vw;
+	background: linear-gradient(to left, rgba(153, 153, 153) 50%, rgb(51, 51 ,51) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.choices {
+	height: 13vw;
+  	width: 13vw;
+  	background-color: rgb(223, 117, 117);
+  	border: 2px solid white;
+  	border-radius: 30px;
+  	display: inline-block;
+  	justify-content: space-around;
+  	align-items: center;
+  	margin: 1.4vw;
+  	margin-top: 6%;
+}
+
+#red {
+	background: linear-gradient(to left, rgb(255,0,0) 50%, #8B0000 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#blue {
+	background: linear-gradient(to left, rgb(47,89,223) 50%, #00008B 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#yellow {
+	background: linear-gradient(to left, rgb(255,255,0) 50%, #9B870C 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#green {
+	background: linear-gradient(to left, rgb(25,162,58) 50%, #006400 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#violet {
+	background: linear-gradient(to left, rgb(128, 0, 128) 50%, #330066 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#orange {
+	background: linear-gradient(to left, #ff8c00 50%, rgb(255,94,19) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#red:hover, #blue:hover, #yellow:hover, #green:hover, #violet:hover, #orange:hover {
+	background-position: left;
+}
+
+#gameOver {
+	width: 60vw;
+	position: absolute;
+	font-size: 4vw;
+	margin-top: -43%;
+	padding-top: 2%;
+	margin-left: 20%;
+	text-align: center;
+	display: none;
+	border-radius: 30px;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow:  25px 25px 50px #5c5c5c,
+             -25px -25px 50px #ffffff;
+    }
+
+#gameOverGreat {
+	background-color: blue;
+	width: 70vw;
+	position: absolute;
+	font-size: 3vw;
+	margin-top: -46%;
+	padding-top: 2%;
+	margin-left: 17%;
+	text-align: center;
+	border-radius: 30px;
+	display: none;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow:  25px 25px 50px #5c5c5c,
+             -25px -25px 50px #ffffff;
+    }
+
+.ending {
+	width: 15vw;
+	font-size: 2vw;
+	padding: 1%;
+	border-radius: 30px;
+	margin-bottom: 5%;
+    background: linear-gradient(to left, #f0f0f0 50%, #cacaca 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    border: 1px solid grey;
+}
+
+.ending:hover {
+	background-position: left;
+}
+
+.back {
+	width: 5vw;
+	position: absolute;
+	margin-left: 1%;
+	margin-top: -1%;
+	cursor: pointer;
+}
+
+.back:hover {
+    opacity: .6;
+    transition: .2s;
+}
+
+#highRisk {
+	position: static;
+	float: right;
+	margin-right: 2%;
+	font-size: 2vw;
+	border-radius: 30px;
+	background: linear-gradient(to left, rgb(80,80,80) 50%, #b2ff59 50%) right;
+	background-size: 210%;
+	color: white;
+	padding: 1vw;
+	transition: .2s ease-out;
+}
+
+#plusTwoScore {
+	position: absolute;
+	right: 0;
+	margin-right: 2%;
+	margin-top: 5%;
+	font-size: 2vw;
+	border-radius: 30px;
+	background: linear-gradient(to left, rgb(80,80,80) 50%, #b2ff59 50%) right;
+	background-size: 210%;
+	color: white;
+	padding: 1vw;
+	transition: .2s ease-out;
+}
+
+#plusThreeScore {
+	position: absolute;
+	right: 0;
+	margin-right: 2%;
+	margin-top: 10%;
+	font-size: 2vw;
+	border-radius: 30px;
+	background: linear-gradient(to left, rgb(80,80,80) 50%, #b2ff59 50%) right;
+	background-size: 210%;
+	color: white;
+	padding: 1vw;
+	transition: .2s ease-out;
+}
+
+#plusFourScore {
+	position: absolute;
+	right: 0;
+	margin-right: 2%;
+	margin-top: 15%;
+	font-size: 2vw;
+	border-radius: 30px;
+	background: linear-gradient(to left, rgb(80,80,80) 50%, #b2ff59 50%) right;
+	background-size: 210%;
+	color: white;
+	padding: 1vw;
+	transition: .2s ease-out;
+}
+
+#qwe {
+	display: none;
+}
+
+#qw{
+	background: linear-gradient(to left, #f0f0f0 50%, #cacaca 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2vw;
+    outline: 0;
+}
+
+#qw:active, #qw:hover {
+  background-position: left;
+}
+
+input {
+	outline: none;
+	border: 1px solid grey;
+}
+
+@media only screen and (max-width:1023px) and (min-width: 768px) {
+  /* For tablet: */
+  .choices {
+    width: 25vw;
+    height: 22vh;
+  }
+
+  #problemCont {
+  	margin-top: 16%;
+  }
+
+  #problem {
+  	font-size: 170%;
+  }
+
+  #highRisk, #plusTwoScore, #plusThreeScore, #plusFourScore {
+  	font-size: calc(1vw + 1.5vh + 1vmin);
+  }
+
+  #plusTwoScore {
+  	margin-top: 9%;
+  }
+
+  #plusThreeScore {
+  	margin-top: 18%;
+  }
+
+  #plusFourScore {
+  	margin-top: 27%;
+  }
+
+  #countdown {
+  	font-size: calc(1vw + 1vh + 2vmin);
+  	width: 10vw;
+  	margin-left: -10px;
+  }
+
+  #score {
+  	font-size: calc(1.2vw + 1.2vh + 7vmin);
+  }
+
+  #scoreCont {
+  	margin-bottom: -7%;
+  }
+
+  .back {
+  	width: 12%;
+  }
+
+  #word, #color {
+	font-size: calc(1.2vw + 1.2vh + 3vmin);
+  }
+
+  #gameOverGreat, #gameOver {
+	background-color: blue;
+	width: 90vw;
+	position: absolute;
+	font-size: calc(1.2vw + 1.2vh + 3vmin);
+	margin-top: -300px;
+	padding-top: 2%;
+	margin-left: 5%;
+	box-shadow:  0px 0px 0px #5c5c5c,
+             0px 0px 0px #ffffff;
+    }
+
+    #gameOverGreat input {
+    	font-size: calc(1.2vw + 1.2vh + 3vmin);
+    }
+
+    #gameOverGreat button, #gameOver button {
+    	font-size: calc(1.2vw + 1.2vh + 3vmin);
+    	width: 40vw;
+    	height: 10vh;
+    }
+
+    #gameOver b, #gameOver span {
+    	font-size: calc(2vw + 2vh + 4vmin);
+    }
+}
+
+@media only screen and (max-width:500px) {
+	body {
+		margin-top: 5vw;
+	}
+
+  /* For mobile phones: */
+  .choices {
+    width: 28vw;
+    height: 25vh;
+  }
+
+  #problemCont {
+  	margin-top: 16%;
+  }
+
+  #problem {
+  	font-size: 170%;
+  }
+
+  #highRisk, #plusTwoScore, #plusThreeScore, #plusFourScore {
+  	font-size: calc(1vw + 1.5vh + 1vmin);
+  }
+
+  #plusTwoScore {
+  	margin-top: 9%;
+  }
+
+  #plusThreeScore {
+  	margin-top: 18%;
+  }
+
+  #plusFourScore {
+  	margin-top: 27%;
+  }
+
+  #countdown {
+  	font-size: calc(1vw + 1vh + 2vmin);
+  	width: 10vw;
+  	margin-left: -10px;
+  }
+
+  #score {
+  	font-size: calc(1.2vw + 1.2vh + 7vmin);
+  }
+
+  #scoreCont {
+  	margin-bottom: -7%;
+  }
+
+  .back {
+  	width: 12%;
+  }
+
+  #word, #color {
+	font-size: calc(1.2vw + 1.2vh + 3vmin);
+  }
+
+  #gameOverGreat, #gameOver {
+	background-color: blue;
+	width: 90vw;
+	position: absolute;
+	font-size: calc(1.2vw + 1.2vh + 3vmin);
+	margin-top: -600px;
+	padding-top: 2%;
+	margin-left: 5%;
+	box-shadow:  0px 0px 0px #5c5c5c,
+             0px 0px 0px #ffffff;
+    }
+
+    #gameOverGreat input {
+    	font-size: calc(1.2vw + 1.2vh + 3vmin);
+    }
+
+    #gameOverGreat button, #gameOver button {
+    	font-size: calc(1.2vw + 1.2vh + 3vmin);
+    	width: 40vw;
+    	height: 10vh;
+    }
+
+    #gameOver b, #gameOver span {
+    	font-size: calc(2vw + 2vh + 4vmin);
+    }
+}

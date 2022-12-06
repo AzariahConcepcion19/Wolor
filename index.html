@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wolor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="UTF-8">
+  	<meta name="description" content="Reaction speed game, color game">
+  	<meta name="keywords" content="Wolor, color, brain, mind, tricky, confusing, reaction, game, color game, brain teaser, mind game, simple game, complicated game, tricky game, brain exercise">
+  	<meta name="author" content="Xyz">
+</head>
+<body onload="ready()">
+	<!-- For description in search bar -->
+	<span style="display: none;">Can a game about colors be hard?</span>
+
+	<div id="highRisk">x2 TIME</div>
+	<div id="plusTwoScore">+2/-2 SCORE</div>
+	<div id="plusThreeScore">+3/-3 SCORE</div>
+	<div id="plusFourScore">+4/-4 SCORE</div>
+
+	<div id="countdownCont">
+		<input type="number" id="countdown" value="30" readonly onload="countdown()">
+	</div>
+
+	<div id="scoreCont">
+		<input type="number" value="100" id="score" readonly onload="fastReaction()">
+	</div>
+
+	<div id="problemCont">
+		<div id="problem"></div>
+	</div>
+
+	<div id="hardFactor" onload="hardFactor()">
+		<div id="word">Word</div>
+		<div id="color">Color</div>
+	</div>
+
+	<center>
+		<button onclick="chosenBox(value, id)" class="choices" id="red" value="rgb(255, 0, 0)"></button>
+		<button onclick="chosenBox(value, id)" class="choices" id="blue" value="rgb(47, 89, 223)"></button>
+		<button onclick="chosenBox(value, id)" class="choices" id="green" value="rgb(25, 162, 58)"></button>
+		<button onclick="chosenBox(value, id)" class="choices" id="yellow" value="rgb(255, 255, 0)"></button>
+		<button onclick="chosenBox(value, id)" class="choices" id="violet" value="rgb(128, 0, 128)"></button>
+		<button onclick="chosenBox(value, id)" class="choices" id="orange" value="rgb(255, 140, 0)"></button>
+	</center>
+
+	<div id="gameOver">
+		<b>GAME OVER!</b><br><br>
+        Your total score:<br>
+        <b><span id="finalScore"></span></b><br>
+        <button class="ending" onclick="playAgain()">Play Again</button>
+	</div>
+
+	<script type="text/javascript" src="gameHard.js"></script>
+</body>
+</html>
